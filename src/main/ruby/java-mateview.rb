@@ -1,7 +1,7 @@
 require 'java'
 
-$CLASSPATH << File.expand_path(File.join(File.dirname(__FILE__), *%w(.. .. bin)))
-$:.push(File.expand_path(File.join(File.dirname(__FILE__), *%w(.. .. lib))))
+$CLASSPATH << File.expand_path(File.join(File.dirname(__FILE__), *%w(.. .. .. target classes)))
+$:.push(File.expand_path(File.join(File.dirname(__FILE__), *%w(.. .. .. lib))))
 
 require 'jdom'
 
