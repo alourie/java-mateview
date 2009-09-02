@@ -1,0 +1,8 @@
+osx:
+  swt: lib/swt-osx.jar
+
+linux:
+  swt: lib/swt-linux.jar
+  
+windows:
+  swt: lib/swt-linux.jar
