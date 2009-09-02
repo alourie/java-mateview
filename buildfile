@@ -7,9 +7,9 @@ repositories.remote << "http://www.ibiblio.org/maven2/"
 
 SWT_VERSION = case java.lang.System.getProperty "os.name"
 when /OS X/i
-  "lib/swt-osx.jar"
+  "lib/osx/swt.jar"
 when /linux/i
-  "lib/swt-linux.jar"
+  "lib/linux/swt.jar"
 end
 
 LOCAL_LIBS = Dir["lib/org.eclipse.*.jar", "lib/joni.jar", "lib/jdom.jar", "lib/jcodings.jar"]
