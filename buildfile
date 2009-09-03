@@ -14,15 +14,24 @@ end
 
 LOCAL_LIBS = Dir["lib/org.eclipse.*.jar", "lib/joni.jar", "lib/jdom.jar", "lib/jcodings.jar"]
 
-desc "The Java-mateview project"
-define "java-mateview" do
+desc "The Java-mateview project Junit"
+define "jmate-junit" do
+
   project.version = VERSION_NUMBER
   project.group = GROUP
   manifest["Implementation-Vendor"] = COPYRIGHT
   compile.with [SWT_VERSION, LOCAL_LIBS]
   test.compile.with # Add classpath dependencies
-  
+  test.using :junit
+end
+
+desc "The Java-mateview project Rspec"
+define "jmate-specs" do
+
+  project.version = VERSION_NUMBER
+  project.group = GROUP
+  manifest["Implementation-Vendor"] = COPYRIGHT
+  compile.with [SWT_VERSION, LOCAL_LIBS]
+  test.compile.with # Add classpath dependencies
   test.using :jtestr
-  
-  package(:jar)
 end
