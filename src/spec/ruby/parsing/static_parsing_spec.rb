@@ -1,5 +1,5 @@
-
-require 'spec/spec_helper'
+spec_helper = File.join(File.dirname(__FILE__), *%w(.. spec_helper))
+require spec_helper
 
 describe JavaMateView do
   before(:each) do
